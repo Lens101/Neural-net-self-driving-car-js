@@ -12,6 +12,12 @@ function animate() {
   car.update();
   //resize canvas
   canvas.height = window.innerHeight;
+  ctx.save();
+  ctx.translate(0, -car.y + canvas.height * 0.7);
+
+  road.draw(ctx);
+  car.draw(ctx);
+
   road.draw(ctx);
   car.draw(ctx);
   //calls animate 30x / sec
